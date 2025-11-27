@@ -10,7 +10,7 @@ from services.otx import otx_lookup
 
 def main():
     st.set_page_config(page_title="Threat Intelligence Dashboard", layout="wide")
-    st.title("🔍 Threat Intelligence Dashboard")
+    st.title(" Threat Intelligence Dashboard")
     st.write(
         "Enter IPs, domains, URLs, or hashes below (one per line) to enrich them "
         "using VirusTotal and AlienVault OTX."
@@ -21,7 +21,7 @@ def main():
         use_vt = st.checkbox("Use VirusTotal", value=True)
         use_otx = st.checkbox("Use AlienVault OTX", value=True)
         st.markdown(
-            "⚠️ Make sure you set your API keys as environment variables:\n\n"
+            " Make sure you set your API keys as environment variables:\n\n"
             "- `VT_API_KEY`\n"
             "- `OTX_API_KEY`\n"
         )
@@ -84,7 +84,7 @@ def main():
             results.append(row)
 
         if errors:
-            with st.expander("⚠️ Errors / Warnings"):
+            with st.expander("Errors / Warnings"):
                 for err in errors:
                     st.write("-", err)
 
